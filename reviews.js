@@ -25,9 +25,10 @@ export default function ReviewPage() {
         placeholder="Enter your review"
         required
       />
+      <br />
       <label>
         Product ID:
-        <select value={productId} onChange={(e) => setProductId(e.target.value)}>
+        <select value={productId} onChange={(e) => setProductId(e.target.value)} style={{ marginLeft: '10px' }}>
           {Array.from({ length: 10 }, (_, i) => (
             <option key={i + 1} value={i + 1}>
               {i + 1}
@@ -35,6 +36,7 @@ export default function ReviewPage() {
           ))}
         </select>
       </label>
+      <br />
       <button type="submit">Submit Review</button>
     </form>
   );
